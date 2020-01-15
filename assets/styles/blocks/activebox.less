@@ -1,0 +1,57 @@
+// main:../style.less
+
+.header {
+  background-blend-mode: multiply;
+  width: 1900px;
+  height: 760px;
+  background-position: center;
+  background-image: url("../images/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: @layer34color;
+}
+
+.activebox {
+  display: flex;
+  justify-content: space-between;
+}
+.svgactivebox {
+  margin-left: 364px;
+  padding-top: 37px;
+  height: 24px;
+  width: 178px;
+}
+.nav_header {
+  margin-right: 364px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 37px;
+}
+.nav_link a {
+  text-decoration: none;
+  font-size: 13px;
+  color: @white;
+  font-family: "Raleway";
+  font-weight: 700;
+  margin-left: 50px;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: @pink;
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    z-index: 1;
+
+    transition: width 0.5s linear;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}

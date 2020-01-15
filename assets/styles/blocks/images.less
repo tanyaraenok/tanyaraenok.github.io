@@ -1,0 +1,74 @@
+// main:../style.less
+
+.images {
+  max-width: 1900px;
+  margin: 0;
+  margin-bottom: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.image_item {
+  width: 475px;
+  height: 350px;
+  margin: 0px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.image_item3 {
+  position: absolute;
+  position: relative;
+  flex-direction: column;
+  width: 475px;
+  height: 350px;
+  margin: 0px;
+  padding: 0;
+  margin: 0;
+  &:after {
+    content: "";
+    width: 0px;
+    height: 350px;
+    background-color: @pink;
+    opacity: 0.6;
+
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 1;
+
+    transition: width 0.01s linear;
+  }
+  &:hover {
+    &:after {
+      width: 475px;
+    }
+    .large {
+      opacity: 1;
+    }
+    .little {
+      opacity: 1;
+    }
+  }
+}
+.large {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 100%;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Raleway";
+  font-weight: 700;
+  opacity: 0;
+}
+.little {
+  position: absolute;
+  top: 60%;
+  left: 34%;
+  width: 100%;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Raleway";
+  opacity: 0;
+}
